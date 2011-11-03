@@ -1,4 +1,16 @@
 AuthNoah::Application.routes.draw do
+  
+  get "admin/index"
+
+  get "admin/users"
+
+  get "home/index"
+
+  resource :user_session
+  resources :users
+  
+  root :to => 'home#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
