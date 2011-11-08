@@ -1,0 +1,27 @@
+<h1>Listing favorite_sites</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Sitename</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @favorite_sites.each do |favorite_site| %>
+  <tr>
+    <td><%= favorite_site.user_id %></td>
+    <td><%= favorite_site.sitename %></td>
+    <td><%= favorite_site.url %></td>
+    <td><%= link_to 'Show', favorite_site %></td>
+    <td><%= link_to 'Edit', edit_favorite_site_path(favorite_site) %></td>
+    <td><%= link_to 'Destroy', favorite_site, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Favorite site', new_favorite_site_path %>

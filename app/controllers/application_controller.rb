@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   
     
   def store_location
-    session[:return_to] = request.request_uri
+    session[:return_to] = request.url
   end
     
   def require_user

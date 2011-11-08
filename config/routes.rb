@@ -1,5 +1,7 @@
 AuthNoah::Application.routes.draw do
   
+  resources :favorite_sites
+
   get "admin/index"
 
   get "admin/users"
